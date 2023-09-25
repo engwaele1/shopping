@@ -1,0 +1,22 @@
+{% extends "master.html" %} {% block title %} Details about {{
+mymember.firstname }} {{ mymember.lastname }} {% endblock %} {% block content %}
+<h1>{{ mymember.firstname }} {{ mymember.lastname }}</h1>
+
+<p>Phone {{ mymember.phone }}</p>
+<p>Member since: {{ mymember.joined_date }}</p>
+
+<p>Back to <a href="/members">Members</a></p>
+
+<form action="#" method="post">
+  {%csrf_token%} {{form.as_p}}
+  <br />
+  <button type="submit">apply now</button>
+  <input type="button" value="save" />
+</form>
+
+{% endblock %}
+<div>
+  <div>
+    <div></div>
+  </div>
+</div>
